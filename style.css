@@ -8,7 +8,19 @@ body{
 }
 
 nav{
-   font-family: 'Ubuntu', sans-serif;    
+   font-family: 'Ubuntu', sans-serif;   
+   position: sticky;
+   top: 0;
+   background: black;
+   z-index: 9999;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+.nav-top{
+    display: flex;
+    height: 60px;
+    padding: 0px 16px; 
 }
 
 nav ul{
@@ -19,7 +31,9 @@ nav ul{
     background-color: black;
     color: white;
     font-style: normal;
+    border-radius: 5px ;
     justify-content: space-between;
+    z-index: 1000;
     
 }
 
@@ -28,12 +42,18 @@ nav ul li{
     font-size: 1.3rem;
     background: transparent;
     color: white;
-    border-radius: 15px;
 }
 
+.menu-toggle{
+    display: none;
+    font-size: 26px;
+    cursor: pointer;
+    color: white;
+}
 .brand img{
     width: 44px;
     padding: 0 8px;
+    height: auto;
 }
 
 .brand{
@@ -41,6 +61,9 @@ nav ul li{
     align-items: center;
     font-weight: bolder;
     font-size: 1.3rem;
+    position: relative;
+    z-index: 2000;
+    color: white;
 }
 
 .container{
@@ -50,9 +73,9 @@ nav ul li{
     font-family: 'Varela Round', sans-serif;
     display: flex;
     width: 70%;
-    margin: 23px auto;
+    margin: 20px auto;
     border-radius: 12px;
-    padding: 34px;
+    padding: 20px;
     background-image: url('bg2.jpg');
 }
 
@@ -86,7 +109,7 @@ nav ul li{
     height: 50px;
     display: flex;
     background-color: white;
-    width: 75vh;
+    width: 120%;
     color: black;
     margin: 12px 0;
     justify-content: space-between;
@@ -118,4 +141,96 @@ nav ul li{
     opacity: 0;
     transition: opacity 0.4s ease-in;
 }
+.volume-slider{
+    position: absolute;
+    right: 12vw;
+}
 
+
+@media(max-width:600px){
+    .songItem{
+        max-width: 100%;
+        padding: 10px;
+    }
+    .songItem span{
+        font-size: 0.95rem;
+    }
+    .container{
+        padding: 12px;
+    }
+    .songItemContainer{
+        margin-right: 20px;
+    }
+    nav {
+        position: sticky;
+        top: 0;
+        background: black;
+        z-index: 9999;
+    }
+    .brand{
+        display: flex;
+        align-items: center;
+        z-index: 10000;
+        position: relative;
+        top: 0;
+        left: 12px;
+    }
+     .menu-toggle{
+        display: block;
+        position: fixed;
+        right: 16px;
+        top: 8px;
+        z-index: 10001;
+        color: white;
+        font-size: 28px;
+        cursor: pointer;
+    }
+
+
+   nav ul{
+       flex-direction: column;
+       align-items: flex-start;
+        width: 220px;
+        background: rgb(78, 77, 77);
+        position: fixed;
+        right: -240px;
+        height: 55vh;
+        overflow: hidden;
+        opacity: 1;
+        transition: right 0.4s ease;
+        padding-top: 77px;
+        padding-bottom: 68px;
+        border-radius: 15px; 
+        top: 42px;
+        
+    }
+    nav ul.show{
+        right: 0;
+    }
+    nav ul li{
+       padding-left: 24px;
+        font-size: 1.3rem;
+    }
+
+    .songInfo{
+        padding-bottom: 30px;
+    }
+    
+    .icons{
+        padding-top: 20px;
+        font-size: 13px;
+    }
+   
+    
+    
+   }
+
+@media(max-width:500px){
+    .songItem span{
+        font-size: 0.8rem;
+    }
+    .songItem img{
+        width: 32px;
+        height: 32px;
+    }
+}

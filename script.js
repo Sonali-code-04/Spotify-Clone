@@ -104,3 +104,10 @@ document.getElementById('previous').addEventListener('click', ()=>{
         masterPlay.classList.remove('fa-play-circle');
         masterPlay.classList.add('fa-pause-circle');
 })
+
+const toggle = document.getElementById("menuToggle");
+const navList = document.querySelector("nav ul");
+
+toggle.addEventListener("click", ()=>{
+    navList.classList.toggle("show");
+});

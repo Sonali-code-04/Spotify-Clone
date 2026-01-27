@@ -5,19 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spotify - Your favourite music is here</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"  href="style.css">
 </head>
 <body>
     <nav>
-        <ul>
-         <li class="brand"><img src="logo.png" alt="Spotify">Spotify</li>
+       <div class="menu-toggle" id="menuToggle"><i class="fa-solid fa-bars"></i></div>  
+         <div class="brand"><img src="logo.png" alt="Spotify">Spotify</div>
+      <ul>
             <li >Home</li>
             <li>Search</li>
             <li>Your Library</li>
             <li>Premium</li>
-        </ul>
+         </ul>          
     </nav>
-   
+     
     <div class="container">
         <div class="songList">
           <h1>Best of K-pop</h1>
@@ -88,7 +89,6 @@
     <div class="songInfo">
         <img src="playing.gif" width="42px" alt="" id="gif"> <span id="masterSongName">Loose</span> 
     </div>
-   </div>
    <script src="script.js"></script>
 </body>
 </html>
